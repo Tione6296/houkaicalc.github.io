@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <base target="_top">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-1.css">
+    <link rel="stylesheet" href="style-2.css">
+    <link rel="stylesheet" href="style-3.css">
+  </head>
+  <body>
+    <div class="body-wrapper">
+      <div class="contents-wrapper">
+        <h1>崩壊計算機</h1>
+        <input  id="calc_result" type="button" value="計算">
+        <div id="result">
+          
+        </div>
+      </div>
+
+      <ul class="tab">
+        <li><a href="#prop">概要</a></li>
+        <li><a href="#main">メイン</a></li>
+        <li><a href="#sub">予備</a></li>
+        <li><a href="#seikon">聖痕</a></li>
+      </ul>
+
+      <div id="prop" class="area">
+        <ul>
+          <li>text1</li>
+        </ul>
+      </div>
+
+      <div id="main" class="area">
+        <div class="wrapper">
+          <div>
+            <input type="radio" id="mainKiana" name="mainChara" value="">
+            <label for="mainKiana">キアナ</label>
+          </div>
+          <div>
+            <input type="radio" id="mainMei" name="mainChara" value="">
+            <label for="mainMei">芽衣</label>
+          </div>
+          <div>
+            <input type="radio" id="mainBronya" name="mainChara" value="">
+            <label for="mainBronya">ブローニャ</label>
+          </div>
+          <div>
+            <input type="radio" id="mainHimeko" name="mainChara" value="">
+            <label for="mainHimeko">姫子</label>
+          </div>
+          <div>
+            <input type="radio" id="mainTheresa" name="mainChara" value="">
+            <label for="mainTheresa">テレサ</label>
+          </div>
+          <div>
+            <input type="radio" id="mainSeele" name="mainChara" value="">
+            <label for="mainSeele">ゼーレ</label>
+          </div>
+          <div>
+            <input type="radio" id="mainSin" name="mainChara" value="">
+            <label for="mainSin">シン</label>
+          </div>
+          <div>
+            <input type="radio" id="mainKyusho" name="mainChara" value="">
+            <label for="mainKyusho">九霄</label>
+          </div>
+          <div>
+            <input type="radio" id="mainYssring" name="mainChara" value="">
+            <label for="mainYssring">イザーリン</label>
+          </div>
+          <div>
+            <input type="radio" id="mainFuka" name="mainChara" value="">
+            <label for="mainFuka">フカ</label>
+          </div>
+          <div>
+            <input type="radio" id="mainKika" name="mainChara" value="">
+            <label for="mainKika">輝火</label>
+          </div>
+          <div>
+            <input type="radio" id="mainSirin" name="mainChara" value="">
+            <label for="mainSirin">シーリン</label>
+          </div>
+          <div>
+            <input type="radio" id="mainRita" name="mainChara" value="">
+            <label for="mainRita">リタ</label>
+          </div>
+          <div>
+            <input type="radio" id="mainNinti" name="mainChara" value="">
+            <label for="mainNinti">ニンディ</label>
+          </div>
+          <div>
+            <input type="radio" id="mainJyahnar" name="mainChara" value="">
+            <label for="mainJyahnar">ガーナ</label>
+          </div>
+          <div>
+            <input type="radio" id="mainFran" name="mainChara" value="">
+            <label for="mainFran">フラン</label>
+          </div>
+          <div>
+            <input type="radio" id="mainFemirins" name="mainChara" value="">
+            <label for="mainFemirins">フェミリス</label>
+          </div>
+        </div>
+
+        <div id="selectItem" class="contents-wrapper">
+          <input type="checkbox" id="mainNo923" onclick="click_cb()" value="">
+          <label for="mainNo923">シィル6</label>
+
+        </div>
+
+        <div>
+        <h3>武器攻撃力</h3>
+        <input type="number" id="wepDmg" value="100">
+        </div>
+
+        <table id="buff">
+          <tr>
+            <th>全ダメ</th>
+            <th>武器攻撃力</th>
+            <th>武器ダメ</th>
+            <th>属性ダメ</th>
+            <th>会心ダメ</th>
+          </tr>
+          <tr>
+            <td><input type="number" id="" value="0"></td>
+            <td><input type="number" id="" value="0"></td>
+            <td><input type="number" id="" value="0"></td>
+            <td><input type="number" id="" value="0"></td>
+            <td><input type="number" id="" value="0"></td>
+          </tr>
+        </table>
+
+        <table id="debuff">
+          <tr>
+            <th>敵受ダメ</th>
+            <th>脆弱</th>
+            <th>干物</th>
+          </tr>
+          <tr>
+            <td><input type="number" id="" value="0"></td>
+            <td><input type="number" id="" value="0"></td>
+            <td><input type="number" id="" value="0"></td>
+          </tr>
+        </table>
+
+        <table class="atherStatus">
+          <tr>
+            <th>会心率</th>
+            <th>HP上限</th>
+            <th>HP回復量</th>
+            <th>常在移動速度</th>
+            <th>移動速度</th>
+            <th>回避率</th>
+            <th>攻撃速度</th>
+          </tr>
+          <tr>
+            <td><input type="number" id="" value="0"></td>
+            <td><input type="number" id="" value="0"></td>
+            <td><input type="number" id="" value="0"></td>
+            <td><input type="number" id="" value="0"></td>
+            <td><input type="number" id="" value="0"></td>
+            <td><input type="number" id="" value="0"></td>
+            <td><input type="number" id="" value="0"></td>
+          </tr>
+        </table>
+
+        <div>
+          <h3>全ダメ,与ダメ%</h3>
+          <div id="addAllDmgArea"><input type="number" name="allDmg" value="0"></div>
+          <input type="button" id="addAllDmg" value="追加">
+        </div>
+
+      </div>
+
+      <div id="sub" class="area">
+        <div class="wrapper">
+          <div>
+            <input type="radio" id="subNone" name="subChara" value="" checked>
+            <label for="subNone">なし</label>
+          </div>
+          <div>
+            <input type="radio" id="subKiana" name="subChara" value="">
+            <label for="subKiana">キアナ</label>
+          </div>
+          <div>
+            <input type="radio" id="subMei" name="subChara" value="">
+            <label for="subMei">芽衣</label>
+          </div>
+          <div>
+            <input type="radio" id="subBronya" name="subChara" value="">
+            <label for="subBronya">ブローニャ</label>
+          </div>
+          <div>
+            <input type="radio" id="subHimeko" name="subChara" value="">
+            <label for="subHimeko">姫子</label>
+          </div>
+          <div>
+            <input type="radio" id="subTheresa" name="subChara" value="">
+            <label for="subTheresa">テレサ</label>
+          </div>
+          <div>
+            <input type="radio" id="subSeele" name="subChara" value="">
+            <label for="subSeele">ゼーレ</label>
+          </div>
+          <div>
+            <input type="radio" id="subSin" name="subChara" value="">
+            <label for="subSin">シン</label>
+          </div>
+          <div>
+            <input type="radio" id="subKyusho" name="subChara" value="">
+            <label for="subKyusho">九霄</label>
+          </div>
+          <div>
+            <input type="radio" id="subYssring" name="subChara" value="">
+            <label for="subYssring">イザーリン</label>
+          </div>
+          <div>
+            <input type="radio" id="subFuka" name="subChara" value="">
+            <label for="subFuka">フカ</label>
+          </div>
+          <div>
+            <input type="radio" id="subKika" name="subChara" value="">
+            <label for="subKika">輝火</label>
+          </div>
+          <div>
+            <input type="radio" id="subSirin" name="subChara" value="">
+            <label for="subSirin">シーリン</label>
+          </div>
+          <div>
+            <input type="radio" id="subRita" name="subChara" value="">
+            <label for="subRita">リタ</label>
+          </div>
+          <div>
+            <input type="radio" id="subNinti" name="subChara" value="">
+            <label for="subNinti">ニンディ</label>
+          </div>
+          <div>
+            <input type="radio" id="subJyahnar" name="subChara" value="">
+            <label for="subJyahnar">ガーナ</label>
+          </div>
+          <div>
+            <input type="radio" id="subFran" name="subChara" value="">
+            <label for="subFran">フラン</label>
+          </div>
+          <div>
+            <input type="radio" id="subFemirins" name="subChara" value="">
+            <label for="subFemirins">フェミリス</label>
+          </div>
+        </div>
+        
+      </div>
+
+      <div id="seikon" class="area">
+        <ul>
+          <li><section>
+            <h3 class="title">共通聖痕</h3>
+            <div class="box">
+
+            </div>
+          </section></li>
+          <li><section>
+            <h3 class="title">キアナ</h3><!-- LV45のチェックボックス,チェックが入っていた場合ON/OFFのみのリスト,第二聖痕リスト,共通    -->
+            <div class="box">
+
+            </div>
+            </section></li>
+          <li><section>
+            <h3 class="title">芽衣</h3>
+            <div class="box">
+
+            </div>
+            </section></li>
+          <li><section>
+            <h3 class="title">ブローニャ</h3>
+            <div class="box">
+
+            </div>
+            </section></li>
+          <li><section>
+            <h3 class="title">姫子</h3>
+            <div class="box">
+
+            </div>
+            </section></li>
+          <li><section>
+            <h3 class="title">テレサ</h3>
+            <div class="box">
+
+            </div>
+            </section></li>
+          <li><section>
+            <h3 class="title">ゼーレ</h3>
+            <div class="box">
+
+            </div>
+            </section></li>
+          <li><section>
+            <h3 class="title">シン</h3>
+            <div class="box">
+
+            </div>
+            </section></li>
+          <li><section>
+            <h3 class="title">九霄</h3>
+            <div class="box">
+
+            </div>
+            </section></li>
+          <li><section>
+            <h3 class="title">イザーリン</h3>
+            <div class="box">
+
+            </div>
+            </section></li>
+          <li><section>
+            <h3 class="title">フカ</h3>
+            <div class="box">
+
+            </div>
+            </section></li>
+          <li><section>
+            <h3 class="title">輝火</h3>
+            <div class="box">
+
+            </div>
+            </section></li>
+          <li><section>
+            <h3 class="title">シーリン</h3>
+            <div class="box">
+
+            </div>
+            </section></li>
+          <li><section>
+            <h3 class="title">リタ</h3>
+            <div class="box">
+
+            </div>
+            </section></li>
+          <li><section>
+            <h3 class="title">ニンディ</h3>
+            <div class="box">
+
+            </div>
+            </section></li>
+          <li><section>
+            <h3 class="title">ガーナ</h3>
+            <div class="box">
+
+            </div>
+            </section></li>
+          <li><section>
+            <h3 class="title">フラン</h3>
+            <div class="box">
+
+            </div>
+            </section></li>
+          <li><section>
+            <h3 class="title">フェミリス</h3>
+            <div class="box">
+
+            </div>
+            </section></li>
+        </ul>
+      </div>
+
+      
+
+    </div>
+
+    <script src="./script-1.js"></script>
+    <script src="./script-2.js"></script>
+    <script src="./script-3.js"></script>
+  </body>
+</html>

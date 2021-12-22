@@ -1,0 +1,32 @@
+  .contents-wrapper{
+    margin: 10px;
+  }
+
+  .body-wrapper{
+    background-color: #e5e5e5;
+    max-width: 960px;
+    border: 1px solid #999;
+    margin: 0 auto;
+    
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  body{
+    background-color: #c0bebe;
+  }
+
+  input{
+    width: 40px;
+  }
+
+  #seikon ul{
+    list-style: none;
+  }
+
+
+@media screen and(max-width: 700px){
+    
+}

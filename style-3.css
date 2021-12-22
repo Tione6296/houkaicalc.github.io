@@ -1,0 +1,5 @@
+  /*上限付きチェックボックス*/
+  #selectItem .locked{
+	opacity: 0.75;
+	color: #aaa;
+}
